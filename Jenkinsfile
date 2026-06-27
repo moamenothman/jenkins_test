@@ -11,7 +11,8 @@ pipeline {
 
         stage('Run Script') {
             steps {
-                sh './hello.sh'
+                sh 'chmod +x hello.sh
+                ./hello.sh'
             }
         }
     }
