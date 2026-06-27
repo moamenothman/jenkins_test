@@ -3,17 +3,16 @@ pipeline {
 
     stages {
 
-        stage('Hello') {
+        stage('Checkout') {
             steps {
-                echo 'Hello'
+                checkout scm
             }
         }
 
-        stage('World') {
+        stage('Run Script') {
             steps {
-                echo 'World'
+                sh './scripts/hello.sh'
             }
         }
-
     }
 }
